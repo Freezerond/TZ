@@ -1,0 +1,10 @@
+<li>
+    <a href="{{ menu_item.get_absolute_url }}">{{ menu_item.name }}</a>
+    {% if menu_item.get_children %}
+        <ul>
+            {% for child in menu_item.get_children %}
+                {% include "templatetags/menu_item.html" with menu_item=child %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</li>

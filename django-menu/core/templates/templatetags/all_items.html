@@ -1,0 +1,5 @@
+<ul>
+  {% for menu_item in menu_items %}
+    {% include "templatetags/menu_item.html" with menu_item=menu_item %}
+  {% endfor %}
+</ul>
